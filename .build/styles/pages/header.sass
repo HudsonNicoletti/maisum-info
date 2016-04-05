@@ -1,0 +1,218 @@
+header
+    
+    .info-section
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex-direction: row
+        
+        height: 40px
+        width: 100%
+        border-bottom: 1px solid $_primary-greyL
+        
+        @media(max-width:960px)
+            
+            display: none
+        
+        ul
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: row
+            list-style: none
+            margin: 0
+            
+            li
+                padding: 6px 14px
+                font:
+                    family: Open Sans
+                    size: 14px
+                    weight: 400
+                text-transform: uppercase
+                color: $_primary-black
+                
+                i
+                    padding: 0 10px
+                    font: 
+                        weight: 700
+                    color: $_primary-green
+                
+        .search
+            padding: 0 30px
+            width: 300px
+            
+            input
+                padding: 9px 6px
+                margin: 0
+                width: calc( 100% - 43px)
+                border:
+                    top: none
+                    bottom: none
+                    left: 1px solid $_primary-greyL
+                    right: 1px solid $_primary-greyL
+                    
+                &:focus
+                    outline-color: $_primary-green
+                    
+            button
+                display: inline-block
+                border: none
+                background-color: $_primary-green
+                color: $_primary-white
+                font-size: 20px
+                padding: 4px 12px 8px 12px
+                margin-left: -4px
+                transition: all 0.3s ease-in-out
+                
+                &:hover
+                    background-color: darken($_primary-green , 10%)
+                    
+        
+    .main-section
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: row
+        
+        height: 190px
+        width: 100%
+        position: relative
+        
+        @media( max-width: 960px )
+            flex-direction: column-reverse
+        
+        .logo
+            width: 355px
+            height: 155px
+            background:
+                image: url('../images/logo/default.png')
+                repeat: no-repeat
+                size: contain
+                position: center center
+            
+        .social
+            position: absolute
+            top: 50%
+            right: 45px
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: row
+            text-align: center
+            
+            @media( max-width: 960px )
+                position: initial
+                padding: 15px 0
+                width: 100%
+                
+            a
+                color: $_primary-greyL
+
+                &:hover
+                    color: $_primary-green
+            
+                i
+                    padding: 15px 20px
+                    font:
+                        size: 20px
+                    
+    nav
+        width: 100%
+        background-color: $_primary-greyD
+        z-index: 5
+        
+        .menu-logo
+            display: none
+            width: 50px
+            height: 60px
+            background:
+                image: url('../images/logo/mobile.png')
+                repeat: no-repeat
+                size: contain
+                position: center center
+            margin: 10px
+            float: left
+            
+        .menu-toggle
+            display: none
+            padding: 10px
+            cursor: pointer
+            float: right
+            margin-top: 0px
+            transition: all 0.3s linear
+            
+            span.bar
+                display: block
+                width: 60px
+                height: 10px
+                background-color: $_primary-green
+                border-radius: 6px
+                opacity: 1
+                transition: all 0.3s linear
+                transform: rotate(0deg)
+                margin: 10px 0
+
+            &.active
+                span.bar:nth-child(1)
+                    transform: rotate(45deg)
+                span.bar:nth-child(2)                            
+                    margin-top: -20px
+                    opacity: 0
+                span.bar:nth-child(3)
+                    margin-top: -20px
+                    transform: rotate(-45deg)
+                    
+                margin-top: 10px
+            
+        ul
+            list-style: none
+            padding: 0
+            margin: 0
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: row
+            width: 100%
+            
+            li + li
+                border-left: 1px solid rgba(255, 255, 255, 0.15)
+            
+            li
+                padding: 20px 0
+                color: $_primary-white
+                
+                a
+                    color: $_primary-white
+                    padding: 15px 40px 15px 44px
+                    font-family: Raleway
+                    text-transform: uppercase
+                    font-size: 14px
+                    letter-spacing: 0.2em
+
+                &.active, &:hover
+                    text-decoration: none
+                    color: $_primary-green
+
+                    a
+                        color: $_primary-green
+                        
+        @media( max-width: 960px )
+            height: 92px
+            background-color: $_primary-white
+            
+            .menu-logo.active
+                display: inline-block
+                
+            .menu-toggle
+                display: inline-block
+
+            ul
+                display: none
+                flex-direction: column
+                background-color: $_primary-black
+                height: 100vh
+                
+                li + li
+                    border:
+                        top: 1px solid rgba(255, 255, 255, 0.15)
+                        left: none

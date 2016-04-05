@@ -1,0 +1,78 @@
+footer
+    padding: 0
+    width: 100%
+    background:
+        image: url('../images/content/footer-bg.png')
+        repeat: repeat
+        position: center center
+        color: lighten( $_primary-greyD , 10%)
+        
+    .container
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        padding: 40px 0
+
+        @media( max-width: 960px )
+            width: 100%
+            
+        .newsletter
+            width: 355px
+            
+            img
+                width: 100%
+                
+            form.signup
+                display: flex
+                align-items: center
+                justify-content: center
+                flex-direction: column
+                
+                input[type='text']
+                    width: 100%
+                    padding: 6px  15px
+                    font:
+                        size: 18px
+                        family: Open Sans
+                    text-align: center
+
+                button
+                    display: block
+                    background: rgba( $_primary-white , 0 )
+                    border: solid 1px $_primary-white
+                    color: $_primary-white
+                    padding: 10px 30px
+                    letter-spacing: 0.25em
+                    text-transform: uppercase
+                    transition: all 0.15s linear 0s
+                    margin: 30px 0
+
+                    &:hover
+                        background: rgba( $_primary-white , 1 )
+                        color: $_primary-black
+            
+    .copyright
+        width: 100%
+        .container
+            display: flex
+            align-items: center
+            justify-content: space-between
+            flex-direction: row
+            padding: 40px 0
+            background-color: rgba( $_primary-black, 0.50 )
+            width: 100%
+
+            @media( max-width: 960px )
+                flex-direction: column
+                width: 100%
+
+            p
+                display: inline-block
+                color: $_primary-white
+                font:
+                    family: Open Sans
+                    size: 18px
+
+            a
+                display: inline-block
